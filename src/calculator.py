@@ -32,11 +32,6 @@ def square(a):
     return c
 
 
-def mean(data):
-    mean = data
-    return mean
-
-
 class Calculator:
     result = 0
 
@@ -66,15 +61,3 @@ class Calculator:
     def square(self, a):
         self.result = square(a)
         return self.result
-
-
-
-class CSVStats(Calculator):
-    data = []
-
-    def __init__(self, data_file):
-        self.data = CsvReader(data_file)
-        pass
-
-    def mean(self):
-        mean(self.data)
