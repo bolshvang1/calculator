@@ -34,6 +34,12 @@ class MyTestCase(unittest.TestCase):
             self.assertAlmostEqual(self.calculator.squareroot(row['Value 1']), float(row['Result']))
             self.assertAlmostEqual(self.calculator.result, float(row['Result']))
 
+    def test_square(self):
+        test_data = CsvReader('/src/square.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.square(row['Value 1']), float(row['Result']))
+            self.assertEqual(self.calculator.result, float(row['Result']))
+
     def test_addition(self):
         test_data = CsvReader('/src/addition.csv').data
         for row in test_data:
