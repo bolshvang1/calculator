@@ -10,6 +10,10 @@ def subtraction(a, b):
     c = int(b) - int(a)
     return c
 
+def multiplication(a, b):
+    c = int(b) * int(a)
+    return c
+
 
 def division(a, b):
     c = float(b) / float(a)
@@ -38,6 +42,11 @@ class Calculator:
     def divide(self, a, b):
         self.result = division(a, b)
         return self.result
+
+    def multiply(self, a, b):
+        self.result = multiplication(a, b)
+        return self.result
+
 
 
 class CSVStats(Calculator):
