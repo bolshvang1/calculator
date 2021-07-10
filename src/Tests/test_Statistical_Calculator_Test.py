@@ -30,6 +30,12 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(calculated_variance, correct_var)
         self.assertEqual(calculated_variance, self.statcalc.result)
 
+    def test_standarddev(self):
+        calculated_standarddev = self.statcalc.standarddev()
+        correct_stddev = statistics.stdev(self.statcalc.data)
+        self.assertAlmostEqual(calculated_standarddev, correct_stddev)
+        self.assertEqual(calculated_standarddev, self.statcalc.result)
+
 
 if __name__ == '__main__':
     unittest.main()
