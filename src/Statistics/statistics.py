@@ -1,14 +1,12 @@
-from Calculator.calculator import Calculator
-from Statistics.mean import mean
-from CsvReader.CsvReader import CsvReader
-
+from src.Calculator.calculator import Calculator
+from src.Statistics.mean import mean
 
 
 class Statistics(Calculator):
     data = []
 
-    def __init__(self, filepath):
-        self.data = CsvReader(filepath)
+    def __init__(self, data):
+        self.data = data
         super().__init__()
 
     def mean(self):

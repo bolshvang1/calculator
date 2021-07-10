@@ -1,7 +1,7 @@
 import unittest
-from Randomgenerator.randomgenerator import genrandnumseed
-from Randomgenerator.randomgenerator import genrandnum
-from Randomgenerator.randomgenerator import genrandlist
+from src.Randomgenerator.randomgenerator import genrandnumseed
+from src.Randomgenerator.randomgenerator import genrandnum
+from src.Randomgenerator.randomgenerator import genrandlist
 
 
 class MyTestCase(unittest.TestCase):
