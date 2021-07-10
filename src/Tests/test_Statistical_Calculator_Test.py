@@ -24,6 +24,12 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(calculated_mean, correct_mean)
         self.assertEqual(calculated_mean, self.statcalc.result)
 
+    def test_variance(self):
+        calculated_variance = self.statcalc.variance()
+        correct_var = statistics.variance(self.statcalc.data)
+        self.assertAlmostEqual(calculated_variance, correct_var)
+        self.assertEqual(calculated_variance, self.statcalc.result)
+
 
 if __name__ == '__main__':
     unittest.main()
