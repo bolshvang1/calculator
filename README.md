@@ -17,4 +17,7 @@
   - median
   - standard deviation
   - variance
- 
+---
+- created random number generator to run tests for coded statistical calc functions
+- ran in docker successfully
+- integrated repository to travis and successfully ran tests in travis 
