@@ -35,6 +35,18 @@ class MyTestCase(unittest.TestCase):
         correct_stddev = statistics.stdev(self.statcalc.data)
         self.assertAlmostEqual(calculated_standarddev, correct_stddev)
         self.assertEqual(calculated_standarddev, self.statcalc.result)
+        
+    def test_median(self):
+        calculated_median = self.statcalc.median()
+        correct_median = statistics.median(self.statcalc.data)
+        self.assertAlmostEqual(calculated_median, correct_median)
+        self.assertEqual(calculated_median, self.statcalc.result)
+        
+    def test_mode(self):
+        calculated_mode = self.statcalc.mode()
+        correct_mode = statistics.mode(self.statcalc.data)
+        self.assertAlmostEqual(calculated_mode, correct_mode)
+        self.assertEqual(calculated_mode, self.statcalc.result)
 
 
 if __name__ == '__main__':

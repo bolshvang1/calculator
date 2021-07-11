@@ -2,6 +2,8 @@ from src.Calculator.calculator import Calculator
 from src.Statistics.mean import mean
 from src.Statistics.variance import variance
 from src.Statistics.std_dev import standarddev
+from src.Statistics.median import median
+from src.Statistics.mode import mode
 
 
 class Statistics(Calculator):
@@ -21,5 +23,13 @@ class Statistics(Calculator):
 
     def standarddev(self):
         self.result = standarddev(self.data)
+        return self.result
+
+    def median(self):
+        self.result = median(self.data)
+        return self.result
+
+    def mode(self):
+        self.result = mode(self.data)
         return self.result
 
